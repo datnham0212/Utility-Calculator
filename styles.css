@@ -1,0 +1,40 @@
+.calc-body {
+    margin:auto;
+    width: 30cm;
+    height: 15cm;
+    border-radius: 30px;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+.calc-display {
+    transform: translateX(3%);
+    margin-top: 20px;
+    width: 28cm;
+    height: 2.25cm;
+    font-size: 52px;
+    text-align: right;
+    border: 1px solid black;
+}
+
+.calc-keyboard {
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr;
+    
+}
+
+.calc-button {
+    width: 100px;
+    height: 100px;
+    font-size: 36px;
+}
+
+.numeric-buttons {
+    margin-top: 20px;
+    margin-left: 29px;
+}
+
+.op-buttons {
+    margin-top: 20px;  
+    margin-left: 129px;  
+}   

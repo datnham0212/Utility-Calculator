@@ -5,24 +5,95 @@
     <title>Calculator</title>
 
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
     <div class = "tabs">
-        <button class="tablinks" onclick="openTab(event, 'Calculator')">Calculator</button>
-        <button class="tablinks" onclick="openTab(event, 'Converter')" id = "defaultTab">Converter</button>
+        <button class="tablinks" onclick="openTab(event, 'Calculator')" id = "defaultTab" >Calculator</button>
+        <button class="tablinks" onclick="openTab(event, 'Converter')" >Converter</button>
     </div>
 
     
     <div id="Calculator" class="tabcontent">
-        <h1>Calculator</h1>
-        <input type= "text" id = "input1" name = "input1">
+        <div class = "calc-body">
+            <input type="text" class = "calc-display">  <!-- readonly --> 
+            <div class = "calc-keyboard">
+                <table class = "numeric-buttons">
+                    <tr>
+                        <td><button id="button-7" class="calc-button" onclick="buttonPressed(this)">7</button></td>
+                        <td><button id="button-8" class="calc-button" onclick="buttonPressed(this)">8</button></td>
+                        <td><button id="button-9" class="calc-button" onclick="buttonPressed(this)">9</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button id="button-7" class="calc-button" onclick="buttonPressed(this)">6</button></td>
+                        <td><button id="button-8" class="calc-button" onclick="buttonPressed(this)">5</button></td>
+                        <td><button id="button-9" class="calc-button" onclick="buttonPressed(this)">4</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button id="button-7" class="calc-button" onclick="buttonPressed(this)">3</button></td>
+                        <td><button id="button-8" class="calc-button" onclick="buttonPressed(this)">2</button></td>
+                        <td><button id="button-9" class="calc-button" onclick="buttonPressed(this)">1</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button id="button-clear" class="calc-button" onclick="buttonPressed(this)">C</button></td>
+                        <td><button id="button-0" class="calc-button" onclick="buttonPressed(this)">0</button></td>
+                        <td><button id="button-equal" class="calc-button" onclick="buttonPressed(this)">=</button></td>
+                    </tr>
+                </table>
+                
+            <table class = op-buttons>
+                <tr>
+                    <td><button id="button-plus" class="calc-button">+</button></td>
+                    <td><button id="button-minus" class="calc-button">-</button></td>
+                    <td><button id="button-multiply" class="calc-button">x</button></td>
+                    <td><button id="button-divide" class="calc-button">/</button></td>
+                    <td><button id="button-ce" class="calc-button" onclick="buttonPressed(this)">CE</button></td>
+                    <td><button class="calc-button"></button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                    <td><button class="calc-button"></button></td>
+                </tr>
+
+                
+            </table> 
+                
+            </div>
+        </div>
+
     </div>
 
     
     <div id="Converter" class="tabcontent">
         <h1>Converter</h1>
-        <input type= "text" id = "input2" name = "input2">   
+        <!-- <input type= "text" id = "" name = "input2">    -->
     </div>
 
     <script>
