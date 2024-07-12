@@ -5,7 +5,8 @@
     <title>Calculator</title>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="calc-script.js"></script>
+    <script src="conv-script.js"></script>
 </head>
 <body>
 
@@ -99,7 +100,30 @@
     
     <div id="Converter" class="tabcontent">
         <h1>Converter</h1>
-        <!-- <input type= "text" id = "" name = "input2">    -->
+        <p>From: </p>
+        <input type= "text" id = "cinput" name = "cinput" oninput="convertUnit()">
+        <select id = "cdropdown1" name = "cdropdown1" onchange="convertUnit()">
+            <option value = "kilometers">Kilometers</option>
+            <option value = "meters">Meters</option>
+            <option value = "miles">Miles</option>
+            <option value = "yards">Yards</option>
+            <option value = "feet">Feet</option>
+        </select>   
+
+        <!-- Swap button here -->
+
+        <p>To: </p>
+        <input type="text" id = "coutput" name = "coutput" readonly>
+        <select id = "cdropdown2" name = "cdropdown2" onchange="convertUnit()">
+            <option value = "feet">Feet</option>
+            <option value = "yards">Yards</option>
+            <option value = "miles">Miles</option>
+            <option value = "meters">Meters</option>
+            <option value = "kilometers">Kilometers</option>
+        </select>   
+
+        <!-- <button onclick="convertUnit()">Convert</button> -->
+
     </div>
 
     <script>
