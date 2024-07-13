@@ -101,7 +101,7 @@
     <div id="Converter" class="tabcontent">
         <h1>Converter</h1>
         <fieldset>
-        <p>From: </p>
+        <label>From: </label>
         <input type= "text" id = "cinput" name = "cinput" oninput="convertUnit()">
         <select id = "cdropdown1" name = "cdropdown1" onchange="convertUnit()">
             <option value = "kilometers">Kilometers</option>
@@ -111,10 +111,10 @@
             <option value = "feet">Feet</option>
         </select>   
 
-        <!-- Swap button here -->
+        <button onclick="swap()"><i class="fa fa-exchange"></i></button>
 
-        <p>To: </p>
-        <input type="text" id = "coutput" name = "coutput" readonly>
+        <label>To: </label>
+        <input type="text" id = "coutput" name = "coutput" readonly onchange="convertUnit()">
         <select id = "cdropdown2" name = "cdropdown2" onchange="convertUnit()">
             <option value = "feet">Feet</option>
             <option value = "yards">Yards</option>
@@ -123,7 +123,6 @@
             <option value = "kilometers">Kilometers</option>
         </select>   
         </fieldset>
-        <!-- <button onclick="convertUnit()">Convert</button> -->
 
     </div>
 
