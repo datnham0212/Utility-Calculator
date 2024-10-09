@@ -5,6 +5,7 @@
     <title>Calculator</title>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="calc-script.js"></script>
     <script src="conv-script.js"></script>
 </head>
@@ -101,28 +102,32 @@
     <div id="Converter" class="tabcontent">
         <h1>Converter</h1>
         <fieldset>
-        <label>From: </label>
-        <input type= "text" id = "cinput" name = "cinput" oninput="convertUnit()">
-        <select id = "cdropdown1" name = "cdropdown1" onchange="convertUnit()">
-            <option value = "kilometers">Kilometers</option>
-            <option value = "meters">Meters</option>
-            <option value = "miles">Miles</option>
-            <option value = "yards">Yards</option>
-            <option value = "feet">Feet</option>
-        </select>   
+        <div class = "from">
+            <label>From: </label>
+            <input type= "text" id = "cinput" name = "cinput" oninput="convertUnit()">
+            <select id = "cdropdown1" name = "cdropdown1" onchange="convertUnit()">
+                <option value = "kilometers">Kilometers</option>
+                <option value = "meters">Meters</option>
+                <option value = "miles">Miles</option>
+                <option value = "yards">Yards</option>
+                <option value = "feet">Feet</option>
+            </select>
+        </div>   
 
-        <button onclick="swap()"><i class="fa fa-exchange"></i></button>
+        <button id="swap" onclick="swap()"><i class="fa fa-exchange"></i></button>
 
-        <label>To: </label>
-        <input type="text" id = "coutput" name = "coutput" readonly onchange="convertUnit()">
-        <select id = "cdropdown2" name = "cdropdown2" onchange="convertUnit()">
-            <option value = "feet">Feet</option>
-            <option value = "yards">Yards</option>
-            <option value = "miles">Miles</option>
-            <option value = "meters">Meters</option>
-            <option value = "kilometers">Kilometers</option>
-        </select>   
-        </fieldset>
+        <div class = "to">
+            <label>To: </label>
+            <input type="text" id = "coutput" name = "coutput" readonly onchange="convertUnit()">
+            <select id = "cdropdown2" name = "cdropdown2" onchange="convertUnit()">
+                <option value = "feet">Feet</option>
+                <option value = "yards">Yards</option>
+                <option value = "miles">Miles</option>
+                <option value = "meters">Meters</option>
+                <option value = "kilometers">Kilometers</option>
+            </select>   
+            </fieldset>
+        </div>  
 
     </div>
 

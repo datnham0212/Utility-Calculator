@@ -1,10 +1,19 @@
+body {
+    background: rgb(238,174,191);
+    background: linear-gradient(42deg, rgba(238,174,191,1) 0%, rgba(148,187,233,1) 100%);
+}
+
 .calc-body {
     margin:auto;
     width: 30cm;
     height: 15cm;
     border-radius: 30px;
-    border: 3px solid black;
-    background-color: rgb(63, 63, 63);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .calc-display {
@@ -15,14 +24,17 @@
     font-size: 52px;
     text-align: right;
     color: rgba(0, 0, 0, 0.616);
-    background-color: rgba(80, 224, 176, 0.808);
-    border: 1px solid black;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .calc-keyboard {
     display: grid;
     grid-template-columns: 0.1fr 0.1fr;
-    
 }
 
 .calc-button {
@@ -31,11 +43,21 @@
     font-size: 36px;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: rgba(255, 166, 0, 0.514);
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .calc-button:hover {
-    background-color: rgba(255, 166, 0, 0.414);
+    background: rgba(255, 255, 255, 0.38);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.6px);
+    -webkit-backdrop-filter: blur(3.6px);
+    border: 1px solid rgba(255, 255, 255, 0.19);
 }
 
 .numeric-buttons {
@@ -47,3 +69,136 @@
     margin-top: 20px;  
     margin-left: 30px;  
 }   
+
+fieldset {
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cinput {
+    width: 300px;
+    height: 50px;
+    font-size: 36px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    outline: none;
+}
+
+#coutput {
+    width: 300px;
+    height: 50px;
+    font-size: 36px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    outline: none;
+}
+
+select {
+    width: 200px;
+    height: 50px;
+    font-size: 36px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    appearance: none;
+    padding: 0 10px;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    background: rgba(255, 255, 255, 0.38);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+select:focus {
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+select option {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+select option:hover {
+    background: rgba(255, 255, 255, 0.38);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Ensure that the options dropdown has the glass effect */
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    background-clip: padding-box;
+    border-radius: 1em; /* Make sure the dropdown itself is rounded */
+}
+
+/* Dropdown list styling */
+select::-webkit-scrollbar {
+    width: 8px;
+}
+
+select::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+}
+
+#swap {
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+label {
+    font-size: 36px;
+    color: rgba(0, 0, 0, 0.616);
+    font-weight: bolder;
+}
